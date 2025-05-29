@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  php:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -26,8 +26,8 @@ services:
       MYSQL_ROOT_PASSWORD: contraseña_root
     volumes:
       - mysql-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
+    # Remueve esta línea si no quieres exponer MySQL fuera del contenedor
+    # - "3306:3306"
 
 volumes:
   mysql-data:

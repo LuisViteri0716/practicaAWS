@@ -1,0 +1,22 @@
+/* estilos.css - Personalización mínima con Bootstrap */
+
+/* Fondo personalizado para todo el body */
+body {
+    background-image: url(images/una-taza-de-javascript.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Estilo opcional para mejorar visualización de inputs */
+  input.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
+  }
+  
+  /* Si deseas un estilo más claro en las tarjetas */
+  .card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+  }
+  

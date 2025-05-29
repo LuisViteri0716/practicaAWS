@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.2
 
 #  extensiones necesarias para MySQL
 RUN docker-php-ext-install pdo pdo_mysql
@@ -15,3 +15,10 @@ RUN a2enmod rewrite
 
 # Exponer el puerto 80
 EXPOSE 80
+
+# Instala extensiones necesarias
+RUN docker-php-ext-install mysqli
+
+# Copia el proyecto al contenedor
+COPY . /var/www/html/
+
